@@ -8,5 +8,11 @@ void fire() {
 }
 
 void load() {
+	//Pulls the
 	setSolenoids(EXTEND);
+}
+
+void halt() {
+	motor[drvLeft] = 0;
+	motor[drvRight] = 0;
 }
