@@ -1,10 +1,10 @@
 
 bool killSwitch = false;
 
-void driveControl() {
-	motor[drvLeft]  = (vexRT[Ch1] + vexRT[Ch2])/2;
-	motor[drvRight] = (vexRT[Ch1] - vexRT[Ch2])/2;
-}
+//void driveControl() { // OLD; BROKEN -- use new method below.
+//	motor[drvLeft]  = (vexRT[Ch1] + vexRT[Ch2])/2;
+//	motor[drvRight] = (vexRT[Ch1] - vexRT[Ch2])/2;
+//}
 
 void cannonControl() {
 	if (vexRT[Btn5U] == 1) {
@@ -14,7 +14,7 @@ void cannonControl() {
 	}
 }
 
-void tankCtrl() {
+void driveControl() {
 	if (abs(vexRT[Ch2]) > THRESHOLD && abs(vexRT[Ch1]) < THRESHOLD) {
 		motor[drvLeft] = vexRT[Ch2];
 		motor[drvRight] = vexRT[Ch2];

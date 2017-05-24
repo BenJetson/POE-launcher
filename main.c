@@ -14,8 +14,7 @@ task main()
 
 	while (true) {
 		if (!killSwitchControl()) {
-			//driveControl();
-			tankCtrl();
+			driveControl();
 			cannonControl();
 			releaseControl();
 		} else {
