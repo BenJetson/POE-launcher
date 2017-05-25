@@ -8,9 +8,9 @@ bool killSwitch = false;
 
 void cannonControl() {
 	if (vexRT[Btn5U] == 1) {
-		fire();
+		fire(); //When button "5U" is pressed, it retracts the cylinder.
 	} else if (vexRT[Btn5D] == 1) {
-		load();
+		load(); //When button "5D" is pressed, it extends the cylinder.
 	}
 }
 
@@ -24,7 +24,7 @@ void driveControl() {
 	} else if (abs(vexRT[Ch2]) > THRESHOLD && vexRT[Ch1] < -THRESHOLD) {
 		motor[drvLeft] = vexRT[Ch2] / 2;
 		motor[drvRight] = vexRT[Ch2];
-	} else {\
+	} else {
 		motor[drvLeft] = 0;
 		motor[drvRight] = 0;
 	}
