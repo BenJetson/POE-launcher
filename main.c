@@ -18,7 +18,7 @@ task main()
 			cannonControl();			  //When button on joystick is pressed, retract or extend the cylinder
 			releaseControl();             //Used to release the cannon by turning the motor on cannon head
 		} else {
-			halt();						  //When the kill switch on the joystick is activated, it puts the program in a stopped state until deactivated.
+			halt();						  //Halt movement if kill switch activated
 		}
 	}
 

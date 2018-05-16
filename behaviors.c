@@ -5,13 +5,13 @@ void setSolenoids(int value) {
 }
 
 void fire() {
-	//Pushes cylinder (its inverted)
-	setSolenoids(RETRACT);
+	//Pushes cylinders
+	setSolenoids(EXTEND);
 }
 
 void load() {
-	//Pulls cylinders (its inverted)
-	setSolenoids(EXTEND);
+	//Pulls cylinders
+	setSolenoids(RETRACT);
 }
 
 void halt() {
